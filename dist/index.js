@@ -103,7 +103,7 @@ async function doFetch({
   }
 
   let actualStringValue = `${value}`;
-  if (parseInt(expectedResponseFieldValue) < parseInt(actualStringValue)) {
+  if (parseInt(expectedResponseFieldValue) >= parseInt(actualStringValue)) {
     throw new Error(
       `Property "${expectedResponseField}" is "${actualStringValue}" instead of "${expectedResponseFieldValue}"`
     );
